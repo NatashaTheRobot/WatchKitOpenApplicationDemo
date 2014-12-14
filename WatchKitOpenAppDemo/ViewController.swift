@@ -35,11 +35,10 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("handleWatchKitNotification:"), name: "WatchKitSaysHello", object: nil)
     }
+
     
-    override func viewDidDisappear(animated: Bool) {
+    deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
-        
-        super.viewDidDisappear(animated)
     }
     
     func handleWatchKitNotification(notification: NSNotification) {
