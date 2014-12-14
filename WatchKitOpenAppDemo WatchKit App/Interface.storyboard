@@ -10,31 +10,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitOpenAppDemo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Red" id="0Ae-Lm-QdC">
-                            <color key="titleColor" red="1" green="0.0" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onRedButtonTap" destination="AgC-eL-Hgc" id="mLz-pK-gNu"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Green" id="kP9-WJ-Gd9">
-                            <color key="titleColor" red="0.3411764706" green="1" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onGreenButtonTap" destination="AgC-eL-Hgc" id="YzE-eU-7En"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Orange" id="piy-b7-IDw">
-                            <color key="titleColor" red="1" green="0.59607843140000005" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onOrangeButtonTap" destination="AgC-eL-Hgc" id="jkl-EK-j7A"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Blue" id="7vX-Fx-yAQ">
-                            <color key="titleColor" red="0.34509803919999998" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onBlueButtonTap" destination="AgC-eL-Hgc" id="vvw-lI-OCy"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" hasDetent="YES" id="kwy-MU-7fT">
+                            <items>
+                                <button width="1" alignment="left" verticalAlignment="center" title="Change Color!" id="0Ae-Lm-QdC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="onChangeColorTap" destination="AgC-eL-Hgc" id="bko-aQ-8xr"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="colorGroup" destination="kwy-MU-7fT" id="yei-bM-jDu"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>

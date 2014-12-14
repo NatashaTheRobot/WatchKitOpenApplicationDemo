@@ -9,26 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIAlertViewDelegate {
-
-    private enum Color: String {
-        case Red = "red"
-        case Green = "green"
-        case Orange = "orange"
-        case Blue = "blue"
-        
-        func color() -> UIColor {
-            switch self {
-            case Red:
-                return UIColor.redColor()
-            case .Green:
-                return UIColor.greenColor()
-            case .Orange:
-                return UIColor.orangeColor()
-            case .Blue:
-                return UIColor.blueColor()
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +22,12 @@ class ViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func handleWatchKitNotification(notification: NSNotification) {
-        if let userInfo = notification.object as? [String : String] {
-            if let colorStr = userInfo["color"] {
-                let color = Color(rawValue: colorStr)
-                view.backgroundColor = color?.color()
+        if let userInfo = notification.object as? [String : CGFloat] {
+            switch (userInfo["red"], userInfo["green"], userInfo["blue"]) {
+            case let (.Some(red), .Some(green), .Some(blue)):
+                view.backgroundColor = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
+            default:
+                view.backgroundColor = UIColor.blackColor()
             }
         }
     }

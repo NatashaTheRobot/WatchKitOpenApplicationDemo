@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var colorGroup: WKInterfaceGroup!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -33,25 +35,24 @@ class InterfaceController: WKInterfaceController {
     
     //MARK: Actions
     
-    @IBAction func onRedButtonTap() {
-        openParentAppWithColor("red")
-    }
-    
-    @IBAction func onGreenButtonTap() {
-        openParentAppWithColor("green")
-    }
-    
-    @IBAction func onOrangeButtonTap() {
-        openParentAppWithColor("orange")
-    }
+    @IBAction func onChangeColorTap() {
+        let randomColorComponents = ["red" : CGFloat(arc4random() % 255), "green" : CGFloat(arc4random() % 255), "blue" : CGFloat(arc4random() % 255)]
+        
+        WKInterfaceController.openParentApplication(randomColorComponents, reply: { [unowned self](reply, error) -> Void in
+            
+            if let reply = reply as? [String : CGFloat] {
+                switch (reply["red"], reply["green"], reply["blue"]) {
+                case let (.Some(red), .Some(green), .Some(blue)):
+                    let color = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
+                    self.colorGroup.setBackgroundColor(color)
+                default:
+                    self.colorGroup.setBackgroundColor(UIColor.blackColor())
+                }
+            }
 
-    @IBAction func onBlueButtonTap() {
-        openParentAppWithColor("blue")
-    }
-    
-    private func openParentAppWithColor(color: String) {
-        WKInterfaceController.openParentApplication(["color" : color], reply: { (infoDict, error) -> Void in
             
         })
+
     }
+
 }

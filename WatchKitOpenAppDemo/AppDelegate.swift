@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
         NSNotificationCenter.defaultCenter().postNotificationName("WatchKitSaysHello", object: userInfo)
+        
+        let randomColorComponents = ["red" : CGFloat(arc4random() % 255), "green" : CGFloat(arc4random() % 255), "blue" : CGFloat(arc4random() % 255)]
+        reply(randomColorComponents)
     }
 
 
