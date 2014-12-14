@@ -19,6 +19,7 @@
 		FA0969841A39D69A0041048C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0969831A39D69A0041048C /* Interface.storyboard */; };
 		FA0969861A39D69A0041048C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0969851A39D69A0041048C /* Images.xcassets */; };
 		FA0969891A39D69A0041048C /* WatchKitOpenAppDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA0969721A39D69A0041048C /* WatchKitOpenAppDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FACEDD741A3DB0E4002E9F0A /* ColorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEDD731A3DB0E4002E9F0A /* ColorInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		FA0969821A39D69A0041048C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0969831A39D69A0041048C /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		FA0969851A39D69A0041048C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FACEDD731A3DB0E4002E9F0A /* ColorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				FA09694E1A39D68D0041048C /* AppDelegate.swift */,
 				FA0969501A39D68D0041048C /* ViewController.swift */,
+				FACEDD731A3DB0E4002E9F0A /* ColorInfo.swift */,
 				FA0969521A39D68D0041048C /* Main.storyboard */,
 				FA0969551A39D68D0041048C /* Images.xcassets */,
 				FA0969571A39D68D0041048C /* LaunchScreen.xib */,
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACEDD741A3DB0E4002E9F0A /* ColorInfo.swift in Sources */,
 				FA0969511A39D68D0041048C /* ViewController.swift in Sources */,
 				FA09694F1A39D68D0041048C /* AppDelegate.swift in Sources */,
 			);
@@ -631,6 +635,7 @@
 				FA09696A1A39D68D0041048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA09696B1A39D68D0041048C /* Build configuration list for PBXNativeTarget "WatchKitOpenAppDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -639,6 +644,7 @@
 				FA09696D1A39D68D0041048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA09698A1A39D69A0041048C /* Build configuration list for PBXNativeTarget "WatchKitOpenAppDemo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -647,6 +653,7 @@
 				FA09698C1A39D69A0041048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA09698D1A39D69A0041048C /* Build configuration list for PBXNativeTarget "WatchKitOpenAppDemo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +662,7 @@
 				FA09698F1A39D69A0041048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

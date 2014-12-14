@@ -12,11 +12,11 @@
                     <items>
                         <group width="1" height="1" alignment="center" verticalAlignment="center" hasDetent="YES" id="kwy-MU-7fT">
                             <items>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Change Color!" id="0Ae-Lm-QdC">
+                                <button width="1" alignment="left" verticalAlignment="center" title="Marco" id="0Ae-Lm-QdC">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <connections>
-                                        <action selector="onChangeColorTap" destination="AgC-eL-Hgc" id="bko-aQ-8xr"/>
+                                        <action selector="onMarcoButtonTap" destination="AgC-eL-Hgc" id="eTB-Ev-SGx"/>
                                     </connections>
                                 </button>
                             </items>

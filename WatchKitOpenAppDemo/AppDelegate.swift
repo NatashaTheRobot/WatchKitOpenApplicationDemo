@@ -41,11 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    //  AppDelegate.swift
+    //  WatchKitOpenAppDemo
+    
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        NSNotificationCenter.defaultCenter().postNotificationName("WatchKitSaysHello", object: userInfo)
         
-        let randomColorComponents = ["red" : CGFloat(arc4random() % 255), "green" : CGFloat(arc4random() % 255), "blue" : CGFloat(arc4random() % 255)]
-        reply(randomColorComponents)
+        let colorInfo = ColorInfo(userInfo: userInfo, reply: reply)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("WatchKitSaysHello",
+            object: colorInfo)
     }
 
 
